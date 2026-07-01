@@ -7,6 +7,10 @@ float varianza (float arreglo[], int n);
 float curtosis (float arreglo[], int n);
 float maximo (float arreglo[], int n);
 float minimo (float arreglo[], int n);
+void obtenerSiglas(char texto[], char resultado[]);
+int stringAEntero(char texto[]);
+char caracterMasRepetido(char texto[]);
+
 
 
 
