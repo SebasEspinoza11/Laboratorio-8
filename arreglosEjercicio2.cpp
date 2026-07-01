@@ -1,6 +1,7 @@
 #include <iostream>
 #include "arreglos.h"
 
+<<<<<<< HEAD
 using namespace std;
 
 int traza(int arr[][4]){
@@ -62,3 +63,5 @@ void simetria(int arr[][4]){
 
 
 
+=======
+>>>>>>> 2c08203ecbfe8edce63e1314d6cc1bb04d9bf171
