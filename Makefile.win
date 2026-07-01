@@ -4,11 +4,11 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = Main.o arreglosEjercicio1.o arreglosEjercicio3.o arreglosEjercicio2.o
-LINKOBJ  = Main.o arreglosEjercicio1.o arreglosEjercicio3.o arreglosEjercicio2.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
-INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+OBJ      = arreglosEjercicio1.o arreglosEjercicio2.o arreglosEjercicio3.o Main.o
+LINKOBJ  = arreglosEjercicio1.o arreglosEjercicio2.o arreglosEjercicio3.o Main.o
+LIBS     = -L"D:/Dev-Cpp/MinGW64/lib" -L"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Dev-Cpp/MinGW64/include" -I"D:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = Laboratorio8.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
@@ -24,14 +24,14 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-Main.o: Main.cpp
-	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
-
 arreglosEjercicio1.o: arreglosEjercicio1.cpp
 	$(CPP) -c arreglosEjercicio1.cpp -o arreglosEjercicio1.o $(CXXFLAGS)
+
+arreglosEjercicio2.o: arreglosEjercicio2.cpp
+	$(CPP) -c arreglosEjercicio2.cpp -o arreglosEjercicio2.o $(CXXFLAGS)
 
 arreglosEjercicio3.o: arreglosEjercicio3.cpp
 	$(CPP) -c arreglosEjercicio3.cpp -o arreglosEjercicio3.o $(CXXFLAGS)
 
-arreglosEjercicio2.o: arreglosEjercicio2.cpp
-	$(CPP) -c arreglosEjercicio2.cpp -o arreglosEjercicio2.o $(CXXFLAGS)
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
